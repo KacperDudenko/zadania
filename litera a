@@ -1,0 +1,28 @@
+using System;
+using System.IO;
+
+public class Ex2
+{
+    public int CountChars(string source, char tofind)
+    {
+    int count = 0;
+    foreach (var ch in source)
+        {
+            if (ch == tofind)
+                count++;
+        }
+    return count;
+    }
+    static void readfile()
+    {
+        string document1 = File.ReadAllText(@"C:\test\test_kac_dud.txt");
+        char litera = 'a';
+        int actual = _countChars.CountChars(document1, litera);
+        
+        Console.WriteLine ("W tekscie jest" + actual + " liter a");
+    }
+    public static void Main(string[] args)
+    {
+        readfile();
+    }
+}
