@@ -1,0 +1,20 @@
+using System;
+using System.IO;
+
+public class Ex4
+{
+    public static void Main(string[] args)
+    {
+       Random rnd = new Random();
+       string[] imie = {"Ania","Kasia","Basia","Zosia"};
+       string[] nazwiska = {"Kowalska","Nowak"};
+       Console.WriteLine("lp" + " " +"imie" + " " +"nazwiska" + " " + "rok urodzenia");
+       for ( int i=1;i<=100;i++)
+       {
+        var nazwisko = rnd.Next(0,2);
+        var name = rnd.Next(0,4);
+        var rok = rnd.Next(1990,2000); 
+        Console.WriteLine(i + " " +imie[name] + " " +nazwiska[nazwisko] + " " + rok);
+       }
+    }
+}
